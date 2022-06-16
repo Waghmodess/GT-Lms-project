@@ -1,0 +1,28 @@
+.Active {
+    background-color: #18b46b;
+}
+
+.container-fluid {
+    border-bottom: solid #18b46b 2px;
+    margin-right: 130px;
+}
+
+.mat-sidenav-container {
+    background-color: white;
+    width: auto;
+    height: 100%;
+    margin: 0px;
+}
+
+.mat-sidenav {
+    background-color: whitesmoke;
+}
+
+.mat-sidenav-content {
+    overflow-x: hidden;
+}
+
+.me-3 {
+    color: #18b46b;
+    font-size: large;
+}

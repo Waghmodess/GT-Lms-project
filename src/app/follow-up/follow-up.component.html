@@ -1,0 +1,168 @@
+<p>follow-up works!</p>
+<!-- <cdk-virtual-scroll-viewport itemSize="5" class="example-viewport">
+    <div *cdkVirtualFor="let item of ds" class="example-item">
+        {{item || 'Loading...'}}
+    </div>
+</cdk-virtual-scroll-viewport> -->
+
+
+
+<!-- <div class="row">
+    <div class="col-lg-11">
+        <div class="row">
+            <div class="col-lg-8">
+                <a href="#"> <i class="icon-top bi bi-arrow-down-up"></i></a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#"><i class="icon-top bi bi-megaphone-fill"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-user"></i></a>
+                <a href="#"><i class="icon-top fa-brands fa-whatsapp-square"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-message"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-repeat"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-download"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-bars"></i></a>
+                <a href="#"><i class="icon-top fa-solid fa-filter justify-content-end"></i></a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mt-3">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <div class="row mt-2">
+                                    <div class="col-lg-3">
+                                        <div class="form-check">
+                                            <mat-checkbox class="example-margin">Ramesh Dudejha</mat-checkbox>
+                                            <p class="d-flex"><a><i class="fa-solid fa-bahai"></i></a>9998881113
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <select>
+                                            <option *ngFor="let sk of names">{{ sk }}</option>
+                                        </select>
+                                        <a href="#"><i class="icon fa-solid fa-phone"></i></a><span
+                                            class="mx-1">0</span>
+                                        <a href="#"><i class="icon fa-regular fa-message"></i></a><span
+                                            class="mx-1">1</span>
+                                        <a href="#"><i class="icon fa-regular fa-envelope"></i></a><span
+                                            class="mx-1">4</span>
+                                        <a href="#"><i class="icon fa-solid fa-message"></i></a><span
+                                            class="mx-1">2</span>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a href="#"><i class="icon fa-brands fa-whatsapp-square"></i></a>
+                                        <a href="#"><i class="icon fa-solid fa-envelope-circle-check"></i></a>
+                                        <a href="#"><i class="icon fa-solid fa-phone"></i></a>
+                                        <a href="#"><i class="icon fa-solid fa-video"></i></a>
+                                        <a href="#"><i class="icon fa-solid fa-message"></i></a>
+                                        <a href="#"><i class="icon fa-solid fa-ellipsis-vertical"></i></a>
+                                    </div>
+                                </div>
+                            </mat-panel-title>
+                            <mat-panel-description>
+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">CONVERTIBILITY</p>
+                                <h4>test</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">ENQUIRY SOURCE</p>
+                                <h4>googleads</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">ENQUIRY TYPE</p>
+                                <h4>Online Leads</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">RESPONCE</p>
+                                <h4>Call back-later- inter</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">CAMPAIGN NAME</p>
+                                <h4>API Lead</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">CENTER</p>
+                                <h4>Pune</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">COURSE</p>
+                                <h4>course1</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">BATCH TYPE</p>
+                                <h4>regular batch</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">LANGUAGE</p>
+                                <h4>English</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">LEAD CREATION DATE</p>
+                                <h4>Jun 9, 2021 3.51 PM</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">LEAD MODIFICATION DATE</p>
+                                <h4>Aug 6, 2021 5.39 PM</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <P class="title">NEXT ACTION DATE</P>
+                                <h4>Aug 10, 2021 12.00 AM</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">LAST RE-ENQURED</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">PREVIOUS LEAD OWNER</p>
+                                <h4>Extraa Edge Admin</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">ASSIGNED TO</p>
+                                <h4>Extraa Edge Admin</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="title">FOLLOWUP COMMENT</p>
+                                <h4>Followup date change</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <p class="title">LAST RE-ENQURED</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <p class="title">CLOSURE COMMIENT</p>
+                            </div>
+                            <div class="col-lg-3">
+
+                            </div>
+                            <div class="col-lg-3">
+
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1">
+        <div class="">
+            <a><i class="fa-solid fa-circle-plus side-button" (click)="openDialog()"></i></a>
+        </div>
+        <div class="pt-2">
+            <a href=""> <i class="fa-solid fa-circle-arrow-up side-button"></i></a>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,182 @@
+<!-- <h1 mat-dialog-title class="d-flex">
+  <div>
+    Add User Data
+  </div>
+  <div class="">
+    <mat-icon>clear</mat-icon>
+  </div>
+</h1> -->
+<div class="d-flex justify-content-between header-section" mat-dialog-title>
+  <h4 class="mb-0"> Add User Data</h4>
+  <button mat-button (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div mat-dialog-content>
+  <form [formGroup]="addData" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label> Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name"
+        [ngClass]="{ 'is-invalid': submitted && name.errors }" />
+      <mat-error *ngIf="name.invalid">Enter Name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>PhoneNo</mat-label>
+      <input matInput placeholder="PhoneNo" formControlName="phoneNo" type="number"
+        [ngClass]="{ 'is-invalid': submitted && phoneNo.errors }" />
+      <mat-error *ngIf="phoneNo.invalid">Enter Phone No</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Ex. pat@example.com"
+        [ngClass]="{ 'is-invalid': submitted && email.errors }">
+      <mat-error *ngIf="email.invalid">Enter Email Address.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Device ID</mat-label>
+      <input matInput placeholder="DeciveId" formControlName="deciveId"
+        [ngClass]="{ 'is-invalid': submitted && phoneNo.errors }" />
+      <mat-error *ngIf="deciveId.invalid">Enter DeciveId</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>City</mat-label>
+      <mat-select formControlName="city">
+        <mat-option *ngFor="let city of cites" [value]="city.value">
+          {{city.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="city.invalid">Enter City.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>I Ride</mat-label>
+      <mat-select formControlName="ride">
+        <mat-option *ngFor="let ride of rides" [value]="ride.value">
+          {{ride.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="city.invalid">Enter I Ride.</mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-between header-section">
+  <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Add User</button>
+</div>
+
+
+
+<!-- 
+<h1 mat-dialog-title>Dialog with elements</h1>
+<div mat-dialog-content>
+  <form>
+    <mat-form-field [formGroup]="formData" (ngSubmit)="submit()" appearance="outline">
+      <mat-label>Input</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button (click)="submit()">Submit</button>
+</div> -->
+
+
+
+
+
+
+
+<!-- <div class="row">
+      <div class="col-lg-6"> -->
+
+<!-- <mat-form-field appearance="outline">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="City" formControlName="city"
+        [ngClass]="{ 'is-invalid': submitted && city.errors }" />
+      <mat-error *ngIf="city.invalid">Enter City</mat-error>
+    </mat-form-field> -->
+
+<!-- 
+    <mat-form-field appearance="outline">
+      <mat-label> State</mat-label>
+      <input matInput placeholder="State" formControlName="state"
+        [ngClass]="{ 'is-invalid': submitted && state.errors }" />
+      <mat-error *ngIf="state.invalid">Enter State Name</mat-error>
+    </mat-form-field> -->
+
+<!-- <mat-form-field class="select" appearance="outline">
+      <mat-label>Type:House</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let center of centers">
+          {{center}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+
+<!-- <mat-form-field appearance="outline">
+          <mat-label> VehicleType</mat-label>
+          <input matInput placeholder="VehicleType" formControlName="vehicleType"
+            [ngClass]="{ 'is-invalid': submitted && vehicleType.errors }" />
+          <mat-error *ngIf="vehicleType.invalid">Enter Vehicle Type</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>DailyCommute</mat-label>
+          <input matInput placeholder="DailyCommute" formControlName="dailyCommute"
+            [ngClass]="{ 'is-invalid': submitted && dailyCommute.errors }" />
+          <mat-error *ngIf="dailyCommute.invalid">Enter Daily Commute</mat-error>
+        </mat-form-field> -->
+<!-- </div> -->
+<!-- <div class="col-lg-6">
+        <mat-form-field appearance="outline">
+          <mat-label>PhoneNo</mat-label>
+          <input matInput placeholder="PhoneNo" formControlName="phoneNo"
+            [ngClass]="{ 'is-invalid': submitted && phoneNo.errors }" />
+          <mat-error *ngIf="phoneNo.invalid">Enter Phone No</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput placeholder="City" formControlName="city"
+            [ngClass]="{ 'is-invalid': submitted && city.errors }" />
+          <mat-error *ngIf="city.invalid">Enter City</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>RegistrationNumber</mat-label>
+          <input matInput placeholder="RegistrationNumber" formControlName="registrationNumber"
+            [ngClass]="{ 'is-invalid': submitted && registrationNumber.errors }" />
+          <mat-error *ngIf="registrationNumber.invalid">Enter Registration Number</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>VehicleMakeYear</mat-label>
+          <input matInput placeholder="VehicleMakeYear" formControlName="vehicleMakeYear"
+            [ngClass]="{ 'is-invalid': submitted && vehicleMakeYear.errors }" />
+          <mat-error *ngIf="vehicleMakeYear.invalid">Enter Vehicle Make Year</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>DownPayment</mat-label>
+          <input matInput placeholder="DownPayment" formControlName="downPayment"
+            [ngClass]="{ 'is-invalid': submitted && downPayment.errors }" />
+          <mat-error *ngIf="downPayment.invalid">Enter Down Payment</mat-error>
+        </mat-form-field>
+      </div> -->
+<!-- </div> -->

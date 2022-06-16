@@ -1,0 +1,99 @@
+.icon-top {
+    color: #18b46b;
+    padding-left: 24px;
+    font-size: large;
+}
+
+.mat-badge {
+    color: #18b46b;
+    font-size: large;
+}
+
+.icon {
+    color: #18b46b;
+    padding-left: 18px;
+    font-size: large;
+}
+
+/* .mat-panel-title {
+    height: 50px;
+} */
+
+.add-user {
+    color: #18b46b;
+    font-size: 7vh;
+    position: fixed;
+    bottom: 70px;
+    text-align: center;
+}
+
+.edit-user {
+    color: #18b46b;
+    font-size: 7vh;
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+}
+
+.text {
+    text-decoration: auto;
+    color: #18b46b;
+    font-size: medium;
+    margin-left: 5vh;
+}
+
+/* mat-expansion-panel-header {
+    height: 90px;
+} */
+
+::ng-deep .langSelect div.mat-select-arrow-wrapper {
+    display: none;
+}
+
+.example-viewport {
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.example-item {
+    height: 100%;
+}
+
+@media(min-width:320px) and (max-width:768px) {
+    .add-user {
+        color: #18b46b;
+        font-size: 8vh;
+        position: fixed;
+        bottom: 10px;
+        text-align: center;
+        right: 6vh;
+    }
+
+    .edit-user {
+        color: #18b46b;
+        font-size: 8vh;
+        position: fixed;
+        bottom: 60px;
+        text-align: center;
+        right: 6vh;
+    }
+}
+
+@media(max-width:425px) {
+    mat-expansion-panel-header {
+        height: 100%;
+    }
+
+    .icon-top {
+        color: #18b46b;
+        padding-left: 18px;
+        font-size: larger;
+    }
+
+    .icon {
+        color: #18b46b;
+        padding-left: 10px;
+        font-size: larger;
+    }
+}

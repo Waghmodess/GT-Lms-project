@@ -1,0 +1,85 @@
+<button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+  <mat-icon *ngIf="!sidenav.opened">
+    menu
+  </mat-icon>
+  <mat-icon *ngIf="sidenav.opened">
+    close
+  </mat-icon>
+</button>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav">
+    <ul class="list-unstyled py-2">
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="lead-list"><i class="bi bi-person-plus-fill me-3"></i>Lead List</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="my-followups"><i class="bi bi-person-plus-fill me-3"></i>My
+          Followups</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="chat-list"><i class="bii bi-chat-left-text-fill me-3"></i>Chat
+          List</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="failed-leads"><i class="bii bi-person-x-fill me-3"></i>Failed
+          Leads</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="marketing"><i class="fa-solid fa-bullhorn me-3"></i>Marketing</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="drip-marketing"><i class="fa-solid fa-spa me-3"></i>Drip
+          Marketing</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="reports"><i class="fa-solid fa-chart-area me-3"></i>Report</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active rounded">
+        <a class="nav-link link-dark" routerLink="settings"><i class="fa-solid fa-gear me-3"></i>Setting</a>
+      </li>
+    </ul>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav list-inline">
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="all">All</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="#">Fresh</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="walkin">walkin</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="in-future">In Future</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="enrolled">Enrolled</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="closed">Closed</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
+          </li>
+          <li class="nav-item px-2 " routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="online">Online</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="div">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
