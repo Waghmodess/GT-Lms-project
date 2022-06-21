@@ -40,7 +40,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatBadgeModule } from '@angular/material/badge';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 
     MatSidenavModule, MatCardModule, MatIconModule, MatToolbarModule, MatExpansionModule,
     MatCheckboxModule, MatGridListModule, MatDialogModule, MatButtonModule, MatInputModule,
-    MatFormFieldModule, MatSelectModule, MatBadgeModule
+    MatFormFieldModule, MatSelectModule, MatBadgeModule, MatDatepickerModule, MatNativeDateModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

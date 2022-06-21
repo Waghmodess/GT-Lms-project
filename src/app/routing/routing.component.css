@@ -26,3 +26,318 @@
     color: #18b46b;
     font-size: large;
 }
+
+/* Responsive */
+/* 1] Try */
+/* .navbar {
+    position: absolute;
+    width: 100%;
+    background: #015237;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 22px 0;
+    transition: padding 0.3s linear;
+    -webkit-transition: padding 0.3s linear;
+    z-index: 999;
+}
+
+.navbar>.container-fluid {
+    height: auto;
+}
+
+.navbartop-btn:hover .mat-button-focus-overlay {
+    display: none;
+}
+
+.navbar:not(.navbar-fixed) .navbartop-btn .mat-button.ripple {
+    top: -22px;
+    bottom: -22px;
+}
+
+.navbar-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 !important;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    animation: _66s slidtDown forwards;
+}
+
+.navbar-fixed .container-fluid {
+    height: 60px !important;
+}
+
+.navbar-fixed .navbartop-btn {
+    line-height: 60px !important;
+}
+
+.navbar-toggle {
+    display: none !important;
+    position: absolute !important;
+    right: 5px;
+}
+
+.icon-button {}
+
+.mat-icon {
+    font-size: 20px;
+}
+
+@media(max-width:991) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar>.container-fluid {
+        height: 60px;
+        padding: 0;
+    }
+
+    .navbar-opened:host .navbar-mobile-top {
+        padding: 13px 0;
+    }
+
+    .navbar-toggle {
+        display: block !important;
+    }
+
+    .navbar-opened:host .container-fluid {
+        height: auto !important;
+        padding: 0px !important;
+    }
+
+    .top-navbar {
+        display: none !important;
+    }
+
+    .navbar-opened:host .top-navba {
+        display: block !important;
+        width: 100% !important;
+        height: auto;
+        flex: none !important;
+        color: #000;
+        background-color: #f3f3f3;
+    }
+
+    .navbar-opened:host .top-navba .a {
+        display: block;
+        width: 100%;
+        line-height: 56px !important;
+    }
+} */
+
+/* 2] Try */
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    color: #000;
+}
+
+i.material-icons {
+    display: none;
+}
+
+@media(max-width:500px) {
+
+    i.material-icons {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .is-open {
+        display: block;
+        position: absolute;
+        top: 42px;
+        background: #fff;
+        width: 100%;
+
+    }
+
+    .nav-link {
+        height: 40px;
+        line-height: 40px;
+        display: block;
+    }
+
+    .container-fluid {
+        border-bottom: solid #18b46b 2px;
+        margin-right: 0;
+    }
+}
+
+
+/* 3] Try */
+/* * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width:768px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6
+    }
+
+    #check:checked ~ ul{
+     left: 0%;   
+    }
+} */
+
+
+/* 4]. Try */
+
+/* nav.manu-btn i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.manu-btn {
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+.menu-hide {
+    display: none;
+}
+
+@media(max-width:500px) {
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+    }
+
+    .menu-hide {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    nav ul li a :hover,
+    nav ul li a .Active {
+        color: cyan;
+        background: none;
+
+    }
+
+    nav .manu-btn i {
+        display: block;
+    }
+
+    #click:checked~.manu-btn i:before {
+        content: "\f00d";
+    }
+} */

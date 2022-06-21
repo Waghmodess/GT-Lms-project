@@ -38,13 +38,12 @@
         <a class="nav-link link-dark" routerLink="settings"><i class="fa-solid fa-gear me-3"></i>Setting</a>
       </li>
     </ul>
-
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+    <!-- <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
       <div class="container-fluid">
-        <ul class="nav navbar-nav list-inline">
+        <ul class="menu nav navbar-nav list-inline ">
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="all">All</a>
           </li>
@@ -55,7 +54,91 @@
             <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
           </li>
           <li class="nav-item px-2" routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="walkin">walkin</a>
+            <a class="nav-link link-dark" routerLink="walkin">Walkin</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="in-future">In Future</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="enrolled">Enrolled</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="closed">Closed</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
+          </li>
+          <li class="nav-item px-2 " routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="online">Online</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- 1] -->
+    <!-- <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0" [ngClass]="{'naubar-fixed' : isFixedNavbar}">
+      <div class="container-fluid" fxLayout="row" fxLayoutWrap="start center">
+        <button mat-icon-button color="accent" class="navbar-toggle" (click)="toggleNavbar">
+         <mat-icon>{{!navbarOpened ? "menu" : "close"}}</mat-icon>
+        </button>
+        <ul class="nav navbar-nav list-inline" fxFlex class="top-navbar">
+          <span fxFlex></span>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="all">All</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="#">Fresh</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="walkin">Walkin</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="in-future">In Future</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="enrolled">Enrolled</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="closed">Closed</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
+          </li>
+          <li class="nav-item px-2 " routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="online">Online</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- 2] Try -->
+
+    <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+      <div class="container-fluid">
+        <ul class="menu nav navbar-nav list-inline" [class.is-open]="isMenuOpen">
+          <li class="burger" (click)="toggleMenu()">
+            <i class="material-icons">{{ isMenuOpen ? "menu" :"close"}}</i>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="all">All</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="#">Fresh</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="walkin">Walkin</a>
           </li>
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="in-future">In Future</a>
@@ -78,6 +161,90 @@
         </ul>
       </div>
     </nav>
+
+    <!-- 3]Try -->
+
+    <!-- <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+      <div class="container-fluid">
+        <ul class="menu nav navbar-nav list-inline ">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="all">All</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="#">Fresh</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="walkin">Walkin</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="in-future">In Future</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="enrolled">Enrolled</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="closed">Closed</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
+          </li>
+          <li class="nav-item px-2 " routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="online">Online</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- 4]. Try -->
+    <!-- <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+      <div class="container-fluid">
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars menu-hide"></i>
+        </label>
+        <ul class="menu nav navbar-nav list-inline ">
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="all">All</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="#">Fresh</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="follow-up">Follow-up</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="walkin">Walkin</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="in-future">In Future</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="enrolled">Enrolled</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="closed">Closed</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
+          </li>
+          <li class="nav-item px-2 " routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+          </li>
+          <li class="nav-item px-2" routerLinkActive="Active rounded">
+            <a class="nav-link link-dark" routerLink="online">Online</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
     <div class="div">
       <router-outlet></router-outlet>
     </div>
