@@ -18,6 +18,7 @@ import { ReferredFromMeComponent } from './referred-from-me/referred-from-me.com
 import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
 import { WalkinComponent } from './walkin/walkin.component';
+import { WonComponent } from './won/won.component';
 
 const routes: Routes = [
   { path: "all", component: AllComponent },
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: "marketing", component: MarketingComponent },
   { path: "drip-marketing", component: DripMarketingComponent },
   { path: "reports", component: ReportsComponent },
-  { path: "settings", component: SettingsComponent }
+  { path: "settings", component: SettingsComponent },
+  { path: "won", component: WonComponent }
 ];
 
 @NgModule({

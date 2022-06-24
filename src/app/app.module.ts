@@ -44,6 +44,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
+import { WonComponent } from './won/won.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MyFollowupsComponent,
     LeadListComponent,
     RoutingComponent,
+    WonComponent,
 
   ],
   imports: [
