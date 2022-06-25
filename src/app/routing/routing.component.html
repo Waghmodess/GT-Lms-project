@@ -11,7 +11,6 @@
     <button mat-icon-button *ngIf="rightSidenav.mode === 'over'" (click)="rightSidenav.toggle()">
       <mat-icon *ngIf="!rightSidenav.opened">
         more_vert
-        <!-- menu -->
       </mat-icon>
       <mat-icon *ngIf="rightSidenav.opened">
         close
@@ -32,10 +31,6 @@
         <a class="nav-link link-dark" routerLink="my-followups"><i class="fa-solid fa-calendar-day me-3"></i>My
           Followups</a>
       </li>
-      <!-- <li class="nav-item" routerLinkActive="Active rounded">
-        <a class="nav-link link-dark" routerLink="chat-list"><i class="bii bi-chat-left-text-fill me-3"></i>Chat
-          List</a>
-      </li> -->
       <li class="nav-item" routerLinkActive="Active rounded">
         <a class="nav-link link-dark" routerLink="failed-leads"><i class="bii bi-person-x-fill me-3"></i>Failed
           Leads</a>
@@ -50,16 +45,13 @@
       <li class="nav-item" routerLinkActive="Active rounded">
         <a class="nav-link link-dark" routerLink="reports"><i class="fa-solid fa-chart-area me-3"></i>Report</a>
       </li>
-      <!-- <li class="nav-item" routerLinkActive="Active rounded">
-        <a class="nav-link link-dark" routerLink="settings"><i class="fa-solid fa-gear me-3"></i>Setting</a>
-      </li> -->
     </ul>
   </mat-sidenav>
 
   <div class="desktop">
     <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
       <div class="container-fluid">
-        <ul class="menu nav navbar-nav list-inline ">
+        <ul class="nav navbar-nav list-inline ">
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="all">All</a>
           </li>
@@ -81,15 +73,9 @@
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="closed">Closed</a>
           </li>
-          <!-- <li class="nav-item px-2" routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
-          </li> -->
           <li class="nav-item px-2 " routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enquired</a>
           </li>
-          <!-- <li class="nav-item px-2" routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="online">Online</a>
-          </li> -->
         </ul>
       </div>
     </nav>
@@ -98,7 +84,7 @@
   <mat-sidenav #rightSidenav="matSidenav" position="end">
     <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
       <div class="container-fluid">
-        <ul class="menu nav navbar-nav list-inline ">
+        <ul class="nav navbar-nav list-inline ">
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="all">All</a>
           </li>
@@ -120,15 +106,9 @@
           <li class="nav-item px-2" routerLinkActive="Active rounded">
             <a class="nav-link link-dark" routerLink="closed">Closed</a>
           </li>
-          <!-- <li class="nav-item px-2" routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="referred-from-me">Referred From Me</a>
-          </li> -->
           <li class="nav-item px-2 " routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enqired</a>
+            <a class="nav-link link-dark" routerLink="re-enquired">Re-Enquired</a>
           </li>
-          <!-- <li class="nav-item px-2" routerLinkActive="Active rounded">
-            <a class="nav-link link-dark" routerLink="online">Online</a>
-          </li> -->
         </ul>
       </div>
     </nav>

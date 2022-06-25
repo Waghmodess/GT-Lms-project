@@ -24,13 +24,6 @@ export class FreshComponent implements OnInit {
   deciveId: FormControl;
   ride: FormControl;
   userData: any;
-  // state: FormControl;
-  // vehicleType: FormControl;
-  // dailyCommute: FormControl;
-  // registrationNumber: FormControl;
-  // downPayment: FormControl;
-  // vehicleMakeYear: FormControl;
-
 
   cites: Food[] = [
     { value: 'Mumbai', viewValue: 'Mumbai' },
@@ -59,11 +52,11 @@ export class FreshComponent implements OnInit {
 
   createFormControls() {
     this.name = new FormControl('', [
-      Validators.required, // Validators.pattern('^[A-Za-z0-9 ]+$'),
+      Validators.required
     ]);
 
     this.phoneNo = new FormControl('', [
-      Validators.required, //Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$"),
+      Validators.required
     ]);
 
     this.email = new FormControl('', [
@@ -81,26 +74,6 @@ export class FreshComponent implements OnInit {
     this.ride = new FormControl('', [
       Validators.required
     ]);
-    // this.state = new FormControl('', [
-    //   Validators.required
-    // ]);
-
-    // this.vehicleType = new FormControl('', [
-    //   Validators.required
-    // ]);
-    // this.dailyCommute = new FormControl('', [
-    //   Validators.required
-    // ]);
-
-    // this.registrationNumber = new FormControl('', [
-    //   Validators.required
-    // ]);
-    // this.downPayment = new FormControl('', [
-    //   Validators.required
-    // ]);
-    // this.vehicleMakeYear = new FormControl('', [
-    //   Validators.required
-    // ]);
   }
 
   createForm() {
@@ -111,12 +84,6 @@ export class FreshComponent implements OnInit {
       city: this.city,
       ride: this.ride,
       deciveId: this.deciveId,
-      // vehicleType: this.vehicleType,
-      // dailyCommute: this.dailyCommute,
-      // state: this.state,
-      // registrationNumber: this.registrationNumber,
-      // vehicleMakeYear: this.vehicleMakeYear,
-      // downPayment: this.downPayment,
     });
   }
 
@@ -134,10 +101,7 @@ export class FreshComponent implements OnInit {
           });
           this.dialog.close("save");
         },
-        // error: () => {
-        //   alert("Error while adding user.");
-        // }
-      })
+      });
     }
     else {
       Swal.fire({

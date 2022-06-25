@@ -4,7 +4,6 @@ import { AllComponent } from './all/all.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ClosedComponent } from './closed/closed.component';
 import { DripMarketingComponent } from './drip-marketing/drip-marketing.component';
-import { EnrolledComponent } from './enrolled/enrolled.component';
 import { FailedLeadsComponent } from './failed-leads/failed-leads.component';
 import { FollowUpComponent } from './follow-up/follow-up.component';
 import { FreshComponent } from './fresh/fresh.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   { path: "follow-up", component: FollowUpComponent },
   { path: "walkin", component: WalkinComponent },
   { path: "in-future", component: InFutureComponent },
-  { path: "enrolled", component: EnrolledComponent },
   { path: "closed", component: ClosedComponent },
   { path: "referred-from-me", component: ReferredFromMeComponent },
   { path: "re-enquired", component: ReEnquiredComponent },

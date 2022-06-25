@@ -1,9 +1,101 @@
 <div class="row">
     <div class="col-lg-11 col-md-11 col-xs-1">
         <div class="row">
-            <div class="container">
-                <a href="#"><i class="icon-top bi bi-arrow-down-up a-icon"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-filter a-icon"></i></a>
+            <div class="container d-flex justify-content-between header-section">
+                <div></div>
+                <div>
+                    <button mat-button [matMenuTriggerFor]="animals"><i
+                            class="icon-top fa-solid fa-filter"></i></button>
+                    <a href="#"><i class="icon-top bi bi-arrow-down-up px-4"></i></a>
+                </div>
+                <mat-menu #animals="matMenu">
+                    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Status</button>
+                    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Enquiry Type</button>
+                    <button mat-menu-item [matMenuTriggerFor]="fish">Vehical Type</button>
+                    <button mat-menu-item [matMenuTriggerFor]="amphibians">State</button>
+                    <button mat-menu-item [matMenuTriggerFor]="reptiles">City</button>
+                </mat-menu>
+
+                <mat-menu #vertebrates="matMenu" class="p-2">
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Birds</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Mammals</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Birds</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Mammals</button>
+                    </mat-checkbox>
+                </mat-menu>
+
+                <mat-menu #invertebrates="matMenu" class="p-2">
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Online Type</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Offline Type</button>
+                    </mat-checkbox>
+                </mat-menu>
+
+                <mat-menu #fish="matMenu" class="p-2">
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Honda Activa</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Honda Dio</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Suzuki Access</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Hero Maestro</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Hero Splendor</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item> Hero HF Deluxe</button>
+                    </mat-checkbox>
+                </mat-menu>
+
+                <mat-menu #amphibians="matMenu" class="p-2">
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Maharashtra</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Karnataka</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Rajasthan</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Tamil Nadu</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Telangana</button>
+                    </mat-checkbox>
+                </mat-menu>
+
+                <mat-menu #reptiles="matMenu" class="p-2">
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Mumbai</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Pune</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Bengaluru</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Chennai</button>
+                    </mat-checkbox>
+                    <mat-checkbox class="checkbox">
+                        <button mat-menu-item>Delhi</button>
+                    </mat-checkbox>
+                </mat-menu>
             </div>
             <!--  <div class="col-lg-8 col-md-5">
                 <a href="#"> <i class="icon-top bi bi-arrow-down-up"></i></a>
@@ -34,11 +126,8 @@
                                             <div class="container aline">
                                                 <div class="row mt-2 aline">
                                                     <div class="col-lg-3 col-md-3">
-                                                        <!-- <mat-checkbox class="example-margin">{{dt.name}}
-                                                        </mat-checkbox> -->
                                                         <div class="form-check" (click)="$event.stopPropagation()">
-                                                            <!-- <mat-checkbox class="example-margin"></mat-checkbox> -->
-                                                            <p>{{dt.name}}</p>
+                                                            <h4>{{dt.name}}</h4>
                                                             <p>{{dt.phoneNo}}</p>
                                                         </div>
                                                     </div>
@@ -94,7 +183,10 @@
                                                         <select (click)="$event.stopPropagation()">
                                                             <option *ngFor="let sk of names">{{ sk }}</option>
                                                         </select>
-                                                        <button mat-button [matMenuTriggerFor]="menu"
+
+                                                        <p>{{dt.state}}</p>
+
+                                                        <!-- <button mat-button [matMenuTriggerFor]="menu"
                                                             (click)="$event.stopPropagation()">
                                                             <mat-icon>more_vert</mat-icon>
                                                         </button>
@@ -110,7 +202,7 @@
                                                                 <a href="#"><i
                                                                         class="icon fa-solid fa-ellipsis-vertical"></i></a>
                                                             </button>
-                                                        </mat-menu>
+                                                        </mat-menu> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -171,203 +263,3 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <!-- #####  This is Without cdk-virtual-scroll-viewport code  ##### -->
-
-
-
-    <!-- <div class="row">
-    <div class="col-lg-11 col-md-11 col-xs-1">
-        <div class="row">
-            <div class="col-lg-8 col-md-5">
-                <a href="#"> <i class="icon-top bi bi-arrow-down-up"></i></a>
-            </div>
-            <div class="col-lg-4 col-md-7">
-                <a href="#"><i class="icon-top bi bi-megaphone-fill"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-user"></i></a>
-                <a href="#"><i class="icon-top fa-brands fa-whatsapp-square"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-message"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-repeat"></i></a>
-                <a href="#"><i class="icon-top fa-solid fa-download"></i></a>
-
-                <button mat-icon-button (click)="select.open()">
-                    <i class="icon-top fa-solid fa-bars"></i>
-                    <mat-select #select class="langSelect">
-                        <mat-option>List1</mat-option>
-                        <mat-option>List2</mat-option>
-                        <mat-option>List3</mat-option>
-                        <mat-option>List4</mat-option>
-                        <mat-option>List5</mat-option>
-                    </mat-select>
-                </button>
-                <a href="#"><i class="icon-top fa-solid fa-filter justify-content-end"></i></a>
-            </div>
-        </div>
-        <div class="container" *ngFor="let dt of userData">
-            <div class="mt-3">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                <div class="container">
-                                    <div class="row mt-2">
-                                        <div class="col-lg-3 col-md-3 ">
-                                            <div class="form-check" (click)="$event.stopPropagation()">
-                                                <mat-checkbox class="example-margin">{{dt.name}}</mat-checkbox>
-                                                <p class="d-flex"><a><i style="color:#18b46b;"
-                                                            class="fa-solid fa-bahai"></i></a>{{dt.phoneNo}}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6  col-md-6">
-                                            <select (click)="$event.stopPropagation()">
-                                                <option *ngFor="let sk of names">{{ sk }}</option>
-                                            </select>
-                                            <a href="#"><i class="icon fa-solid fa-phone"></i></a><span
-                                                class="mx-1">0</span>
-                                            <a href="#"><i class="icon fa-regular fa-message"></i></a><span
-                                                class="mx-1">1</span>
-                                            <a href="#"><i class="icon fa-regular fa-envelope"></i></a><span
-                                                class="mx-1">4</span>
-                                            <a href="#"><i class="icon fa-solid fa-message"></i></a><span
-                                                class="mx-1">2</span>
-                                            <a class="mx-1" style="border-right: 2px solid black;"></a>
-
-                                            <mat-icon class="mat-badge mx-1" matBadge="5" matBadgePosition="below after"
-                                                matBadgeSize="small" matBadgeColor="primary">
-                                                persone
-                                            </mat-icon>
-
-                                            <mat-icon class="mat-badge mx-1" matBadge="6" matBadgePosition="below after"
-                                                matBadgeSize="small" matBadgeColor="warn">
-                                                persone
-                                            </mat-icon>
-
-                                            <mat-icon class="mat-badge mx-1" matBadge="1" matBadgePosition="below after"
-                                                matBadgeSize="small" matBadgeColor="primary">
-                                                persone
-                                            </mat-icon>
-                                            <span (click)="$event.stopPropagation()"><a class="text" href="#">View
-                                                    all</a></span>
-                                        </div>
-                                        <div class="col-lg-3  col-md-3">
-                                            <a href="#"><i class="icon fa-brands fa-whatsapp-square"></i></a>
-                                            <a href="#"><i class="icon fa-solid fa-envelope-circle-check"></i></a>
-                                            <a href="#"><i class="icon fa-solid fa-phone"></i></a>
-                                            <a href="#"><i class="icon fa-solid fa-video"></i></a>
-                                            <a href="#"><i class="icon fa-solid fa-message"></i></a>
-                                            <a href="#"><i class="icon fa-solid fa-ellipsis-vertical"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">State</p>
-                                    <h4>{{dt.state}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">City</p>
-                                    <h4>{{dt.city}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Vehical Type</p>
-                                    <h4>{{dt.vehicleType}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Vehicle Make Year</p>
-                                    <h4>{{dt.vehicleMakeYear}}</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Registration Number</p>
-                                    <h4>{{dt.registrationNumber}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Down Payment</p>
-                                    <h4>{{dt.downPayment}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Daily Commute</p>
-                                    <h4>{{dt.dailyCommute}}</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">Email</p>
-                                    <h4>{{dt.email}}</h4>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">LANGUAGE</p>
-                                    <h4>English</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">LEAD CREATION DATE</p>
-                                    <h4>Jun 9, 2021 3.51 PM</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">LEAD MODIFICATION DATE</p>
-                                    <h4>Aug 6, 2021 5.39 PM</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <P class="title">NEXT ACTION DATE</P>
-                                    <h4>Aug 10, 2021 12.00 AM</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">LAST RE-ENQURED</p>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">PREVIOUS LEAD OWNER</p>
-                                    <h4>Extraa Edge Admin</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">ASSIGNED TO</p>
-                                    <h4>Extraa Edge Admin</h4>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <p class="title">FOLLOWUP COMMENT</p>
-                                    <h4>Followup date change</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <p class="title">LAST RE-ENQURED</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p class="title">CLOSURE COMMIENT</p>
-                                </div>
-                                <div class="col-lg-3">
-
-                                </div>
-                                <div class="col-lg-3">
-
-                                </div>
-                            </div>
-                        </div>
-                    </mat-expansion-panel>
-                </mat-accordion>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-1 col-md-1 col-xs-1">
-        <div class="">
-            <a><i class="fa-solid fa-circle-plus add-user" (click)="openDialog()"></i></a>
-        </div>
-        <div class="pt-2">
-            <a href=""> <i class="fa-solid fa-circle-arrow-up edit-user"></i></a>
-        </div>
-    </div> -->

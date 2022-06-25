@@ -9,7 +9,6 @@ import { FreshComponent } from './fresh/fresh.component';
 import { FollowUpComponent } from './follow-up/follow-up.component';
 import { WalkinComponent } from './walkin/walkin.component';
 import { InFutureComponent } from './in-future/in-future.component';
-import { EnrolledComponent } from './enrolled/enrolled.component';
 import { ClosedComponent } from './closed/closed.component';
 import { ReferredFromMeComponent } from './referred-from-me/referred-from-me.component';
 import { ReEnquiredComponent } from './re-enquired/re-enquired.component';
@@ -26,7 +25,6 @@ import { RoutingComponent } from './routing/routing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -40,11 +38,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatBadgeModule } from '@angular/material/badge';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { WonComponent } from './won/won.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -54,7 +53,6 @@ import { WonComponent } from './won/won.component';
     FollowUpComponent,
     WalkinComponent,
     InFutureComponent,
-    EnrolledComponent,
     ClosedComponent,
     ReferredFromMeComponent,
     ReEnquiredComponent,
@@ -79,7 +77,7 @@ import { WonComponent } from './won/won.component';
     MatSidenavModule, MatCardModule, MatIconModule, MatToolbarModule, MatExpansionModule,
     MatCheckboxModule, MatGridListModule, MatDialogModule, MatButtonModule, MatInputModule,
     MatFormFieldModule, MatSelectModule, MatBadgeModule, MatDatepickerModule, MatNativeDateModule,
-    MatMenuModule
+    MatMenuModule, MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

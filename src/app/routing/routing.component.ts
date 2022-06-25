@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-
-
 @Component({
   selector: 'app-routing',
   templateUrl: './routing.component.html',
@@ -11,12 +9,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class RoutingComponent implements OnInit {
 
-  // For leftSidenav:-
   @ViewChild(MatSidenav)
   leftSidenav!: MatSidenav;
 
-
-  // For RightSidenav:-
   @ViewChild(MatSidenav)
   rightSidenav!: MatSidenav;
 
@@ -25,8 +20,6 @@ export class RoutingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  // For leftSidenav:-
   ngAfterViewInit() {
     setTimeout(() => {
       this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
@@ -40,7 +33,6 @@ export class RoutingComponent implements OnInit {
       });
     }, 0.000);
 
-    // For RightSidenav:-
     setTimeout(() => {
       this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
         if (res.matches) {
