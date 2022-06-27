@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FollowUpComponent implements OnInit {
-
-  selected: Date | null;
-
+  
   constructor() { }
 
   ngOnInit(): void {

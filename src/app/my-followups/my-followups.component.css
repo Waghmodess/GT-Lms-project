@@ -1,0 +1,19 @@
+.example-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+  }
+  
+  .example-item {
+    height: 50px;
+  }
+  
+  .icon-top {
+    color: #18b46b;
+    padding-left: 24px;
+    font-size: large;
+  }
+  
+  .demo-inline-calendar-card {
+    width: 300px;
+  }

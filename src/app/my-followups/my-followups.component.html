@@ -1,1 +1,44 @@
-<p>my-followups works!</p>
+<div class="follow-ups">
+    <div class="row">
+        <div class="col-lg-8">
+            <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav list-inline">
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link link-warn">All(0)</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link link-success">Green-Done Follow-ups(0)</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link link-danger">Red-Missed Follow-up(0)</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link link-warning">Yellow-Planned Follow-up(0)</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-lg-8 col-md-5">
+                    <a href="#"> <i class="icon-top bi bi-arrow-down-up"></i></a>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <a href="#"><i class="icon-top bi bi-megaphone-fill"></i></a>
+                    <a href="#"><i class="icon-top fa-solid fa-message"></i></a>
+                    <a href="#"><i class="icon-top fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="icon-top fa-solid fa-repeat"></i></a>
+                    <a href="#"><i class="icon-top fa-solid fa-download"></i></a>
+                    <a href="#"><i class="icon-top fa-solid fa-filter justify-content-end"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <mat-card class="demo-inline-calendar-card">
+                Follow-up Calendar
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+            </mat-card>
+            <p>Selected date: {{selected}}</p>
+        </div>
+    </div>
+</div>

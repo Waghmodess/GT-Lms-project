@@ -1,0 +1,9 @@
+<span *ngIf="text.length <= wordLimit">{{text}}</span>
+
+<span *ngIf="text.length > wordLimit && !showMore">
+    {{text.substring(0, wordLimit)}} <span class="cursor" (click)="showMore = true">...</span>
+</span>
+
+<span *ngIf="text.length > wordLimit && showMore">
+    {{text}} <span (click)="showMore = false" style="font-style: italic;">Show Less</span>
+</span>

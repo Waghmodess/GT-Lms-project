@@ -44,6 +44,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { WonComponent } from './won/won.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { LabelShowmoreComponent } from './label-showmore/label-showmore.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { MatTreeModule } from '@angular/material/tree';
     LeadListComponent,
     RoutingComponent,
     WonComponent,
+    LabelShowmoreComponent,
 
   ],
   imports: [

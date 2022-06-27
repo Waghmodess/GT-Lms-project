@@ -6,7 +6,7 @@
                 <div>
                     <button mat-button [matMenuTriggerFor]="animals"><i
                             class="icon-top fa-solid fa-filter"></i></button>
-                    <a href="#"><i class="icon-top bi bi-arrow-down-up px-4"></i></a>
+                    <a><i class="icon-top bi bi-arrow-down-up px-4"></i></a>
                 </div>
                 <mat-menu #animals="matMenu">
                     <button mat-menu-item [matMenuTriggerFor]="vertebrates">Status</button>
@@ -70,7 +70,7 @@
                                             </div>
                                             <div class="container aline">
                                                 <div class="row mt-2 aline">
-                                                    <div class="col-lg-3 col-md-3">
+                                                    <div class="col-lg-3 col-md-3 desktop-view">
                                                         <div class="form-check" (click)="$event.stopPropagation()">
                                                             <h4>{{dt.name}}</h4>
                                                             <p>{{dt.phoneNo}}</p>
@@ -78,27 +78,44 @@
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 desktop-view">
                                                         <select (click)="$event.stopPropagation()">
-                                                            <option *ngFor="let sk of EnquiryStatusOption">{{ sk }}</option>
+                                                            <option *ngFor="let sk of EnquiryStatusOption">{{ sk }}
+                                                            </option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-3  col-md-3 desktop-view">
                                                         <p>{{dt.email}}</p>
                                                     </div>
                                                     <div class="col-lg-3  col-md-3 desktop-view">
-                                                        <p>{{dt.state}}</p>
+                                                        <p>{{dt.registrationNumber}}</p>
                                                     </div>
                                                     <div class="mobile-view">
-                                                        <select (click)="$event.stopPropagation()">
-                                                            <option *ngFor="let sk of EnquiryStatusOption">{{ sk }}</option>
-                                                        </select>
-                                                        <p>{{dt.state}}</p>
+                                                        <div class="row pt-3">
+                                                            <div class="d-flex justify-content-between pt-2">
+                                                                <p (click)="$event.stopPropagation()">
+                                                                    <app-label-showmore [text]="dt.name"
+                                                                        [wordLimit]="8"></app-label-showmore>
+                                                                </p>
+                                                                <p>{{dt.phoneNo}}</p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between pb-3">
+                                                                <p><select (click)="$event.stopPropagation()">
+                                                                        <option *ngFor="let sk of EnquiryStatusOption">
+                                                                            {{ sk }}
+                                                                        </option>
+                                                                    </select></p>
+                                                                <p>
+                                                                    <app-label-showmore [text]="dt.registrationNumber"
+                                                                        [wordLimit]="10"></app-label-showmore>
+                                                                </p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </mat-panel-title>
                                     </mat-expansion-panel-header>
                                     <div class="container mt-4">
-                                        <div class="row">
+                                        <div class="row pt-3">
                                             <div class="col-lg-3 col-md-3">
                                                 <p class="title">State</p>
                                                 <h4>{{dt.state}}</h4>

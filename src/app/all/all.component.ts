@@ -13,6 +13,7 @@ interface FilterOption {
   templateUrl: './all.component.html',
   styleUrls: ['./all.component.css'],
 })
+
 export class AllComponent implements OnInit {
   EnquiryStatusOption: string[] = ['Enrolled', 'Fresh', 'Follow-up', 'Walking', 'In-Future', 'Won', 'Closed', 'Re-Enquired'];
   userData: any;
