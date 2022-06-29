@@ -109,9 +109,9 @@ h4 {
     justify-content: flex-start;
 }
 
-::ng-deep .mat-checkbox-checked .mat-checkbox-background, 
+::ng-deep .mat-checkbox-checked .mat-checkbox-background,
 .mat-checkbox-indeterminate .mat-checkbox-background {
-  background-color: #18b46b !important;
+    background-color: #18b46b !important;
 }
 
 
