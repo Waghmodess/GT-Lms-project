@@ -48,7 +48,7 @@ export class AllComponent implements OnInit {
   ];
 
   cityFilter: FilterOption[] = [
-    { value: '0', viewValue: 'Mnmbai' },
+    { value: '0', viewValue: 'Mumbai' },
     { value: '1', viewValue: 'Pune' },
     { value: '2', viewValue: 'Bengaluru' },
     { value: '3', viewValue: 'Chennai' },

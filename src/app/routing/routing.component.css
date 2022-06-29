@@ -1,5 +1,6 @@
 .Active {
     background-color: #18b46b;
+    color: white;
 }
 
 .container-fluid {
@@ -25,6 +26,14 @@
 .sidenav-icon {
     color: #18b46b;
     font-size: large;
+}
+
+.Active .sidenav-icon{
+    color: white;
+}
+
+.Active .nav-link {
+    color: white;
 }
 
 .example-spacer {

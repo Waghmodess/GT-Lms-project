@@ -109,6 +109,11 @@ h4 {
     justify-content: flex-start;
 }
 
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+    background-color: #18b46b !important;
+}
+
+
 @media(max-width:500px) {
 
     .mobile-view {
