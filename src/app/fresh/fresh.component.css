@@ -4,3 +4,7 @@
 .mat-form-field-wrapper.ng-tns-c86-66 {
     outline-color: green;
 }
+
+.mat-raised-button.mat-primary {
+    background: #18b46b;
+}

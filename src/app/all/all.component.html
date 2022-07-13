@@ -1,168 +1,237 @@
-<div class="row">
-    <div class="col-lg-11 col-md-11 col-xs-1">
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+        <div class="d-flex justify-content-between form-header">
+            <h4> Add User Data</h4>
+            <button mat-button (click)="drawer.toggle()" (click)="this.isButtonVisible = true">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+        <form [formGroup]="addData" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label> Name</mat-label>
+                <input matInput placeholder="Name" formControlName="name"
+                    [ngClass]="{ 'is-invalid': submitted && name.errors }" />
+                <mat-error *ngIf="name.invalid">Enter Name</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>PhoneNo</mat-label>
+                <input matInput placeholder="PhoneNo" formControlName="phoneNo" type="number"
+                    [ngClass]="{ 'is-invalid': submitted && phoneNo.errors }" />
+                <mat-error *ngIf="phoneNo.invalid">Enter Phone No</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Ex. pat@example.com"
+                    [ngClass]="{ 'is-invalid': submitted && email.errors }">
+                <mat-error *ngIf="email.invalid">Enter Email Address.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Device ID</mat-label>
+                <input matInput placeholder="DeciveId" formControlName="deciveId"
+                    [ngClass]="{ 'is-invalid': submitted && phoneNo.errors }" />
+                <mat-error *ngIf="deciveId.invalid">Enter DeciveId</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <mat-select formControlName="city">
+                    <mat-option *ngFor="let city of cites" [value]="city.value">
+                        {{city.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="city.invalid">Enter City.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>I Ride</mat-label>
+                <mat-select formControlName="ride">
+                    <mat-option *ngFor="let ride of rides" [value]="ride.value">
+                        {{ride.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="city.invalid">Enter I Ride.</mat-error>
+            </mat-form-field>
+        </form>
+        <div class="d-flex justify-content-between">
+            <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
+            <button mat-raised-button color="primary" (click)="onSubmit()">
+                <mat-icon>check_circle</mat-icon>
+            </button>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
         <div class="row">
-            <div class="container d-flex justify-content-between header-section">
-                <div></div>
-                <div>
-                    <button mat-button [matMenuTriggerFor]="animals"><i
-                            class="icon-top fa-solid fa-filter"></i></button>
-                    <a><i class="icon-top bi bi-arrow-down-up px-4"></i></a>
+            <div class="row">
+                <div class="container d-flex justify-content-between">
+                    <div></div>
+                    <div>
+                        <button mat-button [matMenuTriggerFor]="animals"><i
+                                class="icon-top fa-solid fa-filter"></i></button>
+                        <a><i class="icon-top bi bi-arrow-down-up px-4"></i></a>
+                    </div>
+                    <mat-menu #animals="matMenu">
+                        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Status</button>
+                        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Enquiry Type</button>
+                        <button mat-menu-item [matMenuTriggerFor]="fish">Vehical Type</button>
+                        <button mat-menu-item [matMenuTriggerFor]="amphibians">State</button>
+                        <button mat-menu-item [matMenuTriggerFor]="reptiles">City</button>
+                    </mat-menu>
+
+                    <mat-menu #vertebrates="matMenu" class="p-2">
+                        <mat-option *ngFor="let status of statusFilter" [value]="status.value">
+                            <mat-checkbox class="checkbox">
+                                <button mat-menu-item> {{status.viewValue}}</button>
+                            </mat-checkbox>
+                        </mat-option>
+                    </mat-menu>
+
+                    <mat-menu #invertebrates="matMenu" class="p-2">
+                        <mat-option *ngFor="let enquiry of enquiryFilter" [value]="enquiry.value">
+                            <mat-checkbox class="checkbox">
+                                <button mat-menu-item> {{enquiry.viewValue}}</button>
+                            </mat-checkbox>
+                        </mat-option>
+                    </mat-menu>
+
+                    <mat-menu #fish="matMenu" class="p-2">
+                        <mat-option *ngFor="let vehical of  vehicalFilter" [value]="vehical.value">
+                            <mat-checkbox class="checkbox">
+                                <button mat-menu-item> {{vehical.viewValue}}</button>
+                            </mat-checkbox>
+                        </mat-option>
+                    </mat-menu>
+
+                    <mat-menu #amphibians="matMenu" class="p-2">
+                        <mat-option *ngFor="let state of stateFilter" [value]="state.value">
+                            <mat-checkbox class="checkbox">
+                                <button mat-menu-item> {{state.viewValue}}</button>
+                            </mat-checkbox>
+                        </mat-option>
+                    </mat-menu>
+
+                    <mat-menu #reptiles="matMenu" class="p-2">
+                        <mat-option *ngFor="let city of cityFilter" [value]="city.value">
+                            <mat-checkbox class="checkbox">
+                                <button mat-menu-item> {{city.viewValue}}</button>
+                            </mat-checkbox>
+                        </mat-option>
+                    </mat-menu>
                 </div>
-                <mat-menu #animals="matMenu">
-                    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Status</button>
-                    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Enquiry Type</button>
-                    <button mat-menu-item [matMenuTriggerFor]="fish">Vehical Type</button>
-                    <button mat-menu-item [matMenuTriggerFor]="amphibians">State</button>
-                    <button mat-menu-item [matMenuTriggerFor]="reptiles">City</button>
-                </mat-menu>
 
-                <mat-menu #vertebrates="matMenu" class="p-2">
-                    <mat-option *ngFor="let status of statusFilter" [value]="status.value">
-                        <mat-checkbox class="checkbox">
-                            <button mat-menu-item> {{status.viewValue}}</button>
-                        </mat-checkbox>
-                    </mat-option>
-                </mat-menu>
-
-                <mat-menu #invertebrates="matMenu" class="p-2">
-                    <mat-option *ngFor="let enquiry of enquiryFilter" [value]="enquiry.value">
-                        <mat-checkbox class="checkbox">
-                            <button mat-menu-item> {{enquiry.viewValue}}</button>
-                        </mat-checkbox>
-                    </mat-option>
-                </mat-menu>
-
-                <mat-menu #fish="matMenu" class="p-2">
-                    <mat-option *ngFor="let vehical of  vehicalFilter" [value]="vehical.value">
-                        <mat-checkbox class="checkbox">
-                            <button mat-menu-item> {{vehical.viewValue}}</button>
-                        </mat-checkbox>
-                    </mat-option>
-                </mat-menu>
-
-                <mat-menu #amphibians="matMenu" class="p-2">
-                    <mat-option *ngFor="let state of stateFilter" [value]="state.value">
-                        <mat-checkbox class="checkbox">
-                            <button mat-menu-item> {{state.viewValue}}</button>
-                        </mat-checkbox>
-                    </mat-option>
-                </mat-menu>
-
-                <mat-menu #reptiles="matMenu" class="p-2">
-                    <mat-option *ngFor="let city of cityFilter" [value]="city.value">
-                        <mat-checkbox class="checkbox">
-                            <button mat-menu-item> {{city.viewValue}}</button>
-                        </mat-checkbox>
-                    </mat-option>
-                </mat-menu>
-            </div>
-
-            <div class="outer">
-                <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
-                    <div class="container example-item" *cdkVirtualFor="let dt of userData">
-                        <div class="mt-3">
-                            <mat-accordion>
-                                <mat-expansion-panel>
-                                    <mat-expansion-panel-header>
-                                        <mat-panel-title>
-                                            <div (click)="$event.stopPropagation()">
-                                                <mat-checkbox class="example-margin"></mat-checkbox>
-                                            </div>
-                                            <div class="container aline">
-                                                <div class="row mt-2 aline">
-                                                    <div class="col-lg-3 col-md-3 desktop-view">
-                                                        <div class="form-check" (click)="$event.stopPropagation()">
-                                                            <h4>{{dt.name}}</h4>
-                                                            <p>{{dt.phoneNo}}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-3 desktop-view">
-                                                        <select (click)="$event.stopPropagation()">
-                                                            <option *ngFor="let sk of EnquiryStatusOption">{{ sk }}
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-3  col-md-3 desktop-view">
-                                                        <p>{{dt.email}}</p>
-                                                    </div>
-                                                    <div class="col-lg-3  col-md-3 desktop-view">
-                                                        <p>{{dt.registrationNumber}}</p>
-                                                    </div>
-                                                    <div class="mobile-view">
-                                                        <div class="row pt-3">
-                                                            <div class="d-flex justify-content-between pt-2">
-                                                                <p (click)="$event.stopPropagation()">
-                                                                    <app-label-showmore [text]="dt.name"
-                                                                        [wordLimit]="8"></app-label-showmore>
-                                                                </p>
+                <div class="outer">
+                    <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
+                        <div class="container example-item" *cdkVirtualFor="let dt of userData">
+                            <div class="mt-3">
+                                <mat-accordion>
+                                    <mat-expansion-panel>
+                                        <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                                <div (click)="$event.stopPropagation()">
+                                                    <mat-checkbox class="example-margin"></mat-checkbox>
+                                                </div>
+                                                <div class="container aline">
+                                                    <div class="row mt-2 aline">
+                                                        <div class="col-lg-3 col-md-3 desktop-view">
+                                                            <div class="form-check" (click)="$event.stopPropagation()">
+                                                                <h4>{{dt.name}}</h4>
                                                                 <p>{{dt.phoneNo}}</p>
                                                             </div>
-                                                            <div class="d-flex justify-content-between pb-3">
-                                                                <p><select (click)="$event.stopPropagation()">
-                                                                        <option *ngFor="let sk of EnquiryStatusOption">
-                                                                            {{ sk }}
-                                                                        </option>
-                                                                    </select></p>
-                                                                <p>
-                                                                    <app-label-showmore [text]="dt.registrationNumber"
-                                                                        [wordLimit]="10"></app-label-showmore>
-                                                                </p>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-3 desktop-view">
+                                                            <select (click)="$event.stopPropagation()">
+                                                                <option *ngFor="let sk of EnquiryStatusOption">{{ sk }}
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-3  col-md-3 desktop-view">
+                                                            <p>{{dt.email}}</p>
+                                                        </div>
+                                                        <div class="col-lg-3  col-md-3 desktop-view">
+                                                            <p>{{dt.registrationNumber}}</p>
+                                                        </div>
+                                                        <div class="mobile-view">
+                                                            <div class="row pt-3">
+                                                                <div class="d-flex justify-content-between pt-2">
+                                                                    <p (click)="$event.stopPropagation()">
+                                                                        <app-label-showmore [text]="dt.name"
+                                                                            [wordLimit]="8">
+                                                                        </app-label-showmore>
+                                                                    </p>
+                                                                    <p>{{dt.phoneNo}}</p>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between pb-3">
+                                                                    <p><select (click)="$event.stopPropagation()">
+                                                                            <option
+                                                                                *ngFor="let sk of EnquiryStatusOption">
+                                                                                {{ sk }}
+                                                                            </option>
+                                                                        </select></p>
+                                                                    <p>
+                                                                        <app-label-showmore
+                                                                            [text]="dt.registrationNumber"
+                                                                            [wordLimit]="10"></app-label-showmore>
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </mat-panel-title>
+                                        </mat-expansion-panel-header>
+                                        <div class="container mt-4">
+                                            <div class="row pt-3">
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">State</p>
+                                                    <h4>{{dt.state}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">City</p>
+                                                    <h4>{{dt.city}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Vehical Type</p>
+                                                    <h4>{{dt.vehicleType}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Vehicle Make Year</p>
+                                                    <h4>{{dt.vehicleMakeYear}}</h4>
+                                                </div>
                                             </div>
-                                        </mat-panel-title>
-                                    </mat-expansion-panel-header>
-                                    <div class="container mt-4">
-                                        <div class="row pt-3">
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">State</p>
-                                                <h4>{{dt.state}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">City</p>
-                                                <h4>{{dt.city}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Vehical Type</p>
-                                                <h4>{{dt.vehicleType}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Vehicle Make Year</p>
-                                                <h4>{{dt.vehicleMakeYear}}</h4>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Registration Number</p>
+                                                    <h4>{{dt.registrationNumber}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Down Payment</p>
+                                                    <h4>{{dt.downPayment}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Daily Commute</p>
+                                                    <h4>{{dt.dailyCommute}}</h4>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3">
+                                                    <p class="title">Email</p>
+                                                    <h4>{{dt.email}}</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Registration Number</p>
-                                                <h4>{{dt.registrationNumber}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Down Payment</p>
-                                                <h4>{{dt.downPayment}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Daily Commute</p>
-                                                <h4>{{dt.dailyCommute}}</h4>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3">
-                                                <p class="title">Email</p>
-                                                <h4>{{dt.email}}</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </mat-expansion-panel>
-                            </mat-accordion>
+                                    </mat-expansion-panel>
+                                </mat-accordion>
+                            </div>
                         </div>
-                    </div>
-                </cdk-virtual-scroll-viewport>
-            </div>
-            <div class="col-lg-1 col-md-1 col-xs-1 button-section">
+                    </cdk-virtual-scroll-viewport>
+                </div>
                 <div class="">
-                    <a><i class="fa-solid fa-circle-plus add-user" (click)="openDialog()"></i></a>
+                    <div *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">
+                        <a><i class="fa-solid fa-circle-plus add-user" (click)="drawer.toggle()"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</mat-drawer-container>

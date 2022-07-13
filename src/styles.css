@@ -11,6 +11,6 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* mat-expansion-panel-header {
-    height: 100px !important;
-} */
+mat-sidenav-content.mat-drawer-content.mat-sidenav-content.ng-star-inserted {
+    overflow: hidden;
+}

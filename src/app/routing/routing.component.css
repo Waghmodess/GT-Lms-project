@@ -5,7 +5,6 @@
 
 .container-fluid {
     border-bottom: solid #18b46b 2px;
-    margin-right: 110px;
 }
 
 .mat-sidenav-container {
@@ -28,7 +27,7 @@
     font-size: large;
 }
 
-.Active .sidenav-icon{
+.Active .sidenav-icon {
     color: white;
 }
 
