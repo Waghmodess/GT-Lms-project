@@ -24,6 +24,7 @@ import { LeadListComponent } from './lead-list/lead-list.component';
 import { RoutingComponent } from './routing/routing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartModule, LineSeriesService, CategoryService } from '@syncfusion/ej2-angular-charts';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
@@ -75,13 +76,14 @@ import { LabelShowmoreComponent } from './label-showmore/label-showmore.componen
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, ReactiveFormsModule, FormsModule, HttpClientModule, ScrollingModule,
+    ChartModule,
 
     MatSidenavModule, MatCardModule, MatIconModule, MatToolbarModule, MatExpansionModule,
     MatCheckboxModule, MatGridListModule, MatDialogModule, MatButtonModule, MatInputModule,
     MatFormFieldModule, MatSelectModule, MatBadgeModule, MatDatepickerModule, MatNativeDateModule,
     MatMenuModule, MatTreeModule
   ],
-  providers: [],
+  providers: [LineSeriesService, CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

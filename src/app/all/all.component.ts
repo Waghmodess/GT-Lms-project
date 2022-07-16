@@ -143,6 +143,7 @@ export class AllComponent implements OnInit {
     })
   }
 
+
   getAllData() {
     this.ser.getData().subscribe({
       next: (res: any) => {
@@ -166,7 +167,8 @@ export class AllComponent implements OnInit {
             icon: "success",
             confirmButtonText: 'Okay',
           });
-          // this.addData.close("save")
+          this.getAllData();
+          this.addData.reset();
         },
       });
     }
