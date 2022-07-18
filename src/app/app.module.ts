@@ -46,7 +46,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { WonComponent } from './won/won.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { LabelShowmoreComponent } from './label-showmore/label-showmore.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +81,8 @@ import { LabelShowmoreComponent } from './label-showmore/label-showmore.componen
     MatSidenavModule, MatCardModule, MatIconModule, MatToolbarModule, MatExpansionModule,
     MatCheckboxModule, MatGridListModule, MatDialogModule, MatButtonModule, MatInputModule,
     MatFormFieldModule, MatSelectModule, MatBadgeModule, MatDatepickerModule, MatNativeDateModule,
-    MatMenuModule, MatTreeModule
+    MatMenuModule, MatTreeModule,
+    Ng2SearchPipeModule,
   ],
   providers: [LineSeriesService, CategoryService],
   bootstrap: [AppComponent]

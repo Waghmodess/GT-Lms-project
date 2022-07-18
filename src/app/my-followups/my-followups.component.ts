@@ -12,7 +12,7 @@ export class MyFollowupsComponent implements OnInit {
   showFiller = false;
   userData: any;
   EnquiryStatusOption: string[] = ['Follow-up', 'Enrolled', 'Fresh', 'Walking', 'In-Future', 'Won', 'Closed', 'Re-Enquired'];
-
+  search: any; // For Filtering Data;
 
   constructor(private api: DataServiceService) { }
 
