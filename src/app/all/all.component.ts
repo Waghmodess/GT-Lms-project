@@ -148,6 +148,7 @@ export class AllComponent implements OnInit {
     this.ser.getData().subscribe({
       next: (res: any) => {
         this.userData = res.result;
+        console.log(this.userData);
       },
       error: (err) => {
         alert("Error while fetching the userData")

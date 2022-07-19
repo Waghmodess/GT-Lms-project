@@ -45,8 +45,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { WonComponent } from './won/won.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSortModule } from '@angular/material/sort';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { LabelShowmoreComponent } from './label-showmore/label-showmore.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,8 +85,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatSidenavModule, MatCardModule, MatIconModule, MatToolbarModule, MatExpansionModule,
     MatCheckboxModule, MatGridListModule, MatDialogModule, MatButtonModule, MatInputModule,
     MatFormFieldModule, MatSelectModule, MatBadgeModule, MatDatepickerModule, MatNativeDateModule,
-    MatMenuModule, MatTreeModule,
-    Ng2SearchPipeModule,
+    MatMenuModule, MatTreeModule, MatSortModule, MatButtonToggleModule,
+    Ng2SearchPipeModule, Ng2OrderModule,
   ],
   providers: [LineSeriesService, CategoryService],
   bootstrap: [AppComponent]

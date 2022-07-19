@@ -19,22 +19,21 @@
             <mat-calendar [(selected)]="selected"></mat-calendar>
         </mat-card>
     </mat-drawer>
-
     <div class="">
         <nav class="navbar navbar-expand-sm fs-6 px-1 mt-0">
             <div class="container-fluid">
                 <ul class="nav navbar-nav list-inline">
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link link-warn">All(0)</a>
+                        <a class="nav-link link-warn">All(0)</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link link-success">Green-Done Follow-ups(0)</a>
+                        <a class="nav-link link-success">Green-Done Follow-ups(0)</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link link-danger">Red-Missed Follow-up(0)</a>
+                        <a class="nav-link link-danger">Red-Missed Follow-up(0)</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link link-warning">Yellow-Planned Follow-up(0)</a>
+                        <a class="nav-link link-warning">Yellow-Planned Follow-up(0)</a>
                     </li>
                 </ul>
                 <button type="button" mat-button (click)="drawer.toggle()">
@@ -44,35 +43,22 @@
         </nav>
     </div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-8 col-md-4">
-                <a><i class="icon-top bi bi-arrow-down-up"></i></a>
+        <table matSort (matSortChange)="sortData($event)">
+            <div class="row">
+                <div mat-sort-header="name">
+                    <a><i class="icon-top bi bi-arrow-down-up"></i></a>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-8">
-                <!-- <a><i class="icon-top bi bi-megaphone-fill"></i></a>
-                <a><i class="icon-top fa-solid fa-message"></i></a>
-                <a><i class="icon-top fa-solid fa-envelope"></i></a>
-                <a><i class="icon-top fa-solid fa-repeat"></i></a>
-                <a><i class="icon-top fa-solid fa-download"></i></a>
-                <a><i class="icon-top fa-solid fa-filter justify-content-end"></i></a> -->
-            </div>
-        </div>
+        </table>
     </div>
     <div class="outer">
-        <!--  For Filtering Data Only one Div below-->
-        <div class="form-group container mt-2">
-            <input type="text" class="form-control" placeholder="Filter" [(ngModel)]="search">
-        </div>
         <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
-            <div class="container example-item" *cdkVirtualFor="let dt of userData | filter:search">
+            <div class="container example-item" *cdkVirtualFor="let dt of userData">
                 <div class="mt-3">
                     <mat-accordion>
                         <mat-expansion-panel>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    <!-- <div (click)="$event.stopPropagation()">
-                                        <mat-checkbox class="example-margin"></mat-checkbox>
-                                    </div> -->
                                     <div class="container aline">
                                         <div class="row mt-2 aline">
                                             <div class="col-lg-3 col-md-3 desktop-view">
